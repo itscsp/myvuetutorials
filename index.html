@@ -16,15 +16,11 @@
 </head>
 <body>
     <div id="app">
-        <h1 v-text="message"></h1>
-        <h1 v-once >{{message}}</h1>
+        <img v-bind:src="url" v-bind:alt="title" />
+        <h1 v-bind:class="{ 'text-primary': isActive }">V -binding</h1>
 
-        <h1  v-cloak>{{message}}</h1>
-        <div v-html="intro"></div>
-        <div v-show="view1"><h3>V-Show</h3></div>
-        <div v-if="view2"><h3>V-if</h3></div>
-        <div v-else>V else</div>
-    <div>
+        <h1  v-cloak v-bind:title="title">{{message}}</h1>
+    </div>
     <!-- vue js files -->
     <script src="./vue.js"></script><!--  vue js file-->
     <script src="./app.js"></script><!-- custom js file -->
