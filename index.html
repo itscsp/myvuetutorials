@@ -6,11 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue JS Tutorials</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        [v-cloak] {
+            background-color:red;
+            display: none;
+        }
+    </style>
 
 </head>
 <body>
-    <div id="app" v-if="message">
-        <h1>{{message}}</h1>
+    <div id="app">
+        <h1 v-text="message"></h1>
+        <h1 v-once >{{message}}</h1>
+
+        <h1  v-cloak>{{message}}</h1>
+        <div v-html="intro"></div>
+        <div v-show="view1"><h3>V-Show</h3></div>
+        <div v-if="view2"><h3>V-if</h3></div>
+        <div v-else>V else</div>
     <div>
     <!-- vue js files -->
     <script src="./vue.js"></script><!--  vue js file-->
