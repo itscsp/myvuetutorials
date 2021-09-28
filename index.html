@@ -19,12 +19,9 @@
 
         <h1 >{{message}}</h1>
 
+        <input type="text" v-model="message" />
+        <!-- /* here we used two way binding that very powerfull and very simple in Vue js -->
 
-        <ul>
-            <li style="list-style-type:none" v-for="todo in todos">{{todo.id}}) {{todo.text}}</li>
-            <hr>
-            <li style="list-style-type:none" v-for="counter in count"> Number {{counter}}</li>
-        </ul>
     </div>
     <!-- vue js files -->
     <script src="./vue.js"></script><!--  vue js file-->

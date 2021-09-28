@@ -1,13 +1,8 @@
 var  app = new Vue({
     el: '#app',
     data:{
-        message: 'Simple Todos List',
-        todos : [
-            {text: 'Learn Vue', id: 1},
-            {text: "Like the video", id: 2},
-            {text: "do some youga", id: 3}
-        ],
-        count:10
+        message: 'Two Way Binding',
+
     }
 })
 /*
