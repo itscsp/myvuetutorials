@@ -16,10 +16,15 @@
 </head>
 <body>
     <div id="app">
-        <img v-bind:src="url" v-bind:alt="title" />
-        <h1 v-bind:class="{ 'text-primary': isActive }">V -binding</h1>
 
-        <h1  v-cloak v-bind:title="title">{{message}}</h1>
+        <h1 >{{message}}</h1>
+
+
+        <ul>
+            <li style="list-style-type:none" v-for="todo in todos">{{todo.id}}) {{todo.text}}</li>
+            <hr>
+            <li style="list-style-type:none" v-for="counter in count"> Number {{counter}}</li>
+        </ul>
     </div>
     <!-- vue js files -->
     <script src="./vue.js"></script><!--  vue js file-->

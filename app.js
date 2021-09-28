@@ -1,10 +1,13 @@
 var  app = new Vue({
     el: '#app',
     data:{
-        message: 'hello I am Chethan S Poojary',
-        title: "you hover me on"+ new Date(),
-        url: "http://vuejs.org/images/logo.png",
-        isActive: true,
+        message: 'Simple Todos List',
+        todos : [
+            {text: 'Learn Vue', id: 1},
+            {text: "Like the video", id: 2},
+            {text: "do some youga", id: 3}
+        ],
+        count:10
     }
 })
 /*
