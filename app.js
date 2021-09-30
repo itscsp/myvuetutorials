@@ -1,13 +1,23 @@
 var  app = new Vue({
     el: '#app',
     data:{
-        message: 'Two Way Binding',
+        message: 'Vue.js Events',
+        count:0
 
+    },
+    methods: {
+        counterup: function(){
+            this.count += 1;
+        },
+
+        counterdn: function(){
+            this.count -= 1;
+        }
     }
 })
 /*
 Notes:
 Class and Style Bindings
-v-bind :' use to add dyanamic data attribute, class amd images and so on
-** shortcut for v-bind :src="" **
+all methods in Vue Js Are stored in "methods"
+
 */
