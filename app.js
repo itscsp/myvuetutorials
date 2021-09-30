@@ -1,17 +1,14 @@
 var  app = new Vue({
     el: '#app',
     data:{
-        message: 'Vue.js Events',
-        count:0
+        message: 'URL Shortner Using Vue JS',
+        url:"csptech.com",
+        cleanURl: ''
 
     },
     methods: {
-        counterup: function(){
-            this.count += 1;
-        },
-
-        counterdn: function(){
-            this.count -= 1;
+        shortner: function(){
+            this.cleanURl = this.url.replace(/^https?:\/\//, '').replace(/\/$/, '')
         }
     }
 })
