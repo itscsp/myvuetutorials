@@ -1,23 +1,29 @@
-var  app = new Vue({
+var app = new Vue({
     el: '#app',
-    data:{
-        message: 'Vue.js Events',
-        count:0
-
+    data: {
+      xp : 10
     },
     methods: {
-        counterup: function(){
-            this.count += 1;
-        },
+      addXp: function() {
+        return this.xp += 10;
+      },
 
-        counterdn: function(){
-            this.count -= 1;
+      decreaseXP: function() {
+        return this.xp -= 10
+      }
+    },
+
+    computed: {
+      level: function() {
+        if (this.xp >= 200){
+          return "Pro"
+        } else if (this.xp >= 100){
+          return "Intermediate"
+        }else if(this.xp >= 0) {
+          return "Beginner"
+        }else {
+
         }
+      }
     }
-})
-/*
-Notes:
-Class and Style Bindings
-all methods in Vue Js Are stored in "methods"
-
-*/
+  })
